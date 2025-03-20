@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reserve At Ochoco</title>
+    <link rel="stylesheet" href="a1.css">
+</head>
+<body>
+    <!-- Page Loading Animation
+    <div class="page-loading">
+        <div class="loader-inner"></div>
+    </div> -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- <div class="logo">
+                <a href="#"><img src="" alt="The Reserve At Ochoco"></a>
+            </div> -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#floor-plans">Floor Plans</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">☰</div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#floor-plans">Floor Plans</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The Reserve<br>At Ochoco</h1>
+            <p>Discover the simplicity of modern living in Prineville, Oregon.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About <span>Us</span></h2>
+            <p>Discover the epitome of luxury living at The Reserve at Ochoco in Central Oregon. Our meticulously designed townhomes offer unparalleled elegance and comfort amidst breathtaking natural surroundings.</p>
+        </div>
+    </section>
+
+    <!-- Floor Plans Section -->
+    <section class="floor-plans" id="floor-plans">
+        <div class="container">
+            <h2><span>Floor</span> Plans</h2>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li><a href="#studio" class="active">Studio</a></li>
+                    <li><a href="#one-bedroom">1 Bedroom</a></li>
+                    <li><a href="#two-bedroom">2 Bedroom</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="studio" class="tab active">
+                        <img src="228745360522aaa9e1303b7e40654907.jpg" alt="Studio Floor Plan">
+                        <p>Embrace modern living with convenient amenities and a welcoming community atmosphere.</p>
+                        <a href="#contact" class="btn">Schedule</a>
+                    </div>
+                    <div id="one-bedroom" class="tab">
+                        <img src="3d-floor-plan-illustration-house-260nw-2398630749.webp" alt="1 Bedroom Floor Plan">
+                        <p>Our charming 1-bedroom apartments offer the perfect blend of comfort and style.</p>
+                        <a href="#contact" class="btn">Schedule</a>
+                    </div>
+                    <div id="two-bedroom" class="tab">
+                        <img src="image_dAwX2DE0_1722709651234_raw.jpg" alt="2 Bedroom Floor Plan">
+                        <p>Spacious 2-bedroom apartments ideal for families or professionals seeking comfort.</p>
+                        <a href="#contact" class="btn">Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Building <span>Features</span></h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>24 Hour Fitness</h3>
+                    <p>Get fit anytime with our 24-hour fitness center right at your doorstep.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Dog Park</h3>
+                    <p>A fantastic dog park where your furry friends can run wild and make new pals.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Gated Community</h3>
+                    <p>Experience luxury living with unparalleled security and peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>We're Here to Help <span>Contact</span> Us</h2>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+                <button type="submit" class="btn">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#floor-plans">Floor Plans</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2025 The Reserve At Ochoco. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        });
+
+        // Tab Switching
+        document.querySelectorAll('.tab-links a').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.tab-links a').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                document.querySelector(tab.getAttribute('href')).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
